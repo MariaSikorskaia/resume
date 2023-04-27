@@ -346,7 +346,7 @@ router.get('/person', function (req, res) {
                               ],
                               team_members: [
                                 {
-                                  name: 'Bob Lee',
+                                  name: 'Bobby Lee',
                                   title:
                                     'Software Engineer',
                                 },
