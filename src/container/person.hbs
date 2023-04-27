@@ -76,13 +76,17 @@
                     <p>{{name}}</p>
                     <p>{{description}}</p>
                     <p>{{technologies}}</p>
-                   
+                   <ul>
                    {{#each team_members}}
+                   <li>
                     <p>{{name}}</p>
                     <p>{{title}}</p>
+                    </li>
+                    {{/each}}
+                    </ul>
                    
          </ul>
-     {{/each}}
+     
      {{/each}}
      {{/each}}
      {{/each}}
