@@ -1,0 +1,93 @@
+<div>
+<h2>Languages:</h2>
+{{#with web}}
+   {{#with languages.[0]}}
+            <b><em>{{name}}</em></b>
+            <p>{{version}}</p>
+            <p>{{description}}</p>
+          <h3>Elements:</h3>
+      {{#with elements.[0]}}
+            <p>{{name}}</p>
+            <p>{{description}}</p>
+         <ul>
+            <b>Attributes:</b>
+         {{#each attributes}}
+            <li>
+               <p>{{name}}</p>
+               <p>{{description}}</p>
+            </li>
+         {{/each}}
+         </ul>
+      {{/with}}
+         {{#with elements.[1]}}
+                     <p>{{name}}</p>
+                     <p>{{description}}</p>
+                  <ul>
+                     <b>Attributes:</b>
+            {{#each attributes}}
+                     <li>
+                        <p>{{name}}</p>
+                        <p>{{description}}</p>
+                     </li>
+            {{/each}}
+                  </ul>
+         {{/with}}
+                <hr>
+   {{/with}}
+            {{#with languages.[1]}}
+                     <b><em>{{name}}</em></b>
+                     <p>{{version}}</p>
+                     <p>{{description}}</p>
+                   <h3>Properties:</h3>
+                  {{#with properties.[0]}}
+                        <p>{{name}}</p>
+                        <p>{{description}}</p>
+                         <ul>
+                          <b>Values:</b>
+                     {{#each values}}
+                           <li>
+                              <p>{{value}}</p>
+                              <p>{{description}}</p>
+                           </li>
+                     {{/each}}
+                         </ul>
+                  {{/with}} 
+            {{/with}}      
+                  <hr>    
+               {{#with languages.[2]}}
+                       <b><em>{{name}}</em></b>
+                        <p>{{version}}</p>
+                        <p>{{description}}</p>
+                       <h3>Functions:</h3>
+                  {{#with functions.[0]}}
+                           <p>{{name}}</p>
+                           <p>{{description}}</p>
+                        <ul>
+                         <b>Parameters:</b>
+                        {{#each parameters}}
+                           <li>
+                              <p>{{name}}</p>
+                              <p>{{type}}</p>
+                              <p>{{description}}</p>
+                           </li>
+                        {{/each}}
+                        </ul>
+                  {{/with}}
+                     {{#with functions.[1]}}
+                                 <p>{{name}}</p>
+                                 <p>{{description}}</p>
+                           <ul>
+                             <b>Parameters:</b>
+                        {{#each parameters}}
+                             <li>
+                                 <p>{{name}}</p>
+                                 <p>{{type}}</p>
+                                 <p>{{description}}</p>
+                             </li>
+                        {{/each}}
+                          </ul>
+                     {{/with}}
+               {{/with }}
+{{/with}}
+</div>
+
