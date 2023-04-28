@@ -1,100 +1,100 @@
 <div>
    {{#with program}}
-    <h1> {{excursion.name}}</h1>
-    <hr>
-    <b>Location:</b>{{excursion.location.city}} {{excursion.location.country}}
-    <p>Date:{{excursion.date}}</p>
+         <h1> {{excursion.name}}</h1>
+         <hr>
+         <b>Location:</b>{{excursion.location.city}} {{excursion.location.country}}
+         <p>Date:{{excursion.date}}</p>
     
-   <br>
+         <br>
 
-      <h2>{{excursion.program.[0].name}}</h2>
-      <p>{{excursion.program.[0].type}}</p>
-      <p>{{excursion.program.[0].duration}}</p>
+         <h2>{{excursion.program.[0].name}}</h2>
+         <p>{{excursion.program.[0].type}}</p>
+         <p>{{excursion.program.[0].duration}}</p>
 
-      <h3>Details:</h3>
+         <h3>Details:</h3>
         
-        {{#with excursion}}
-        {{#with program.[0]}}
-        {{#with details}}
-         <ul>
-            <li>
-               <b>Museum:</b>
-            </li>
-            {{#with museum}}
-            <em>{{name}}</em>
-         </ul>
-         <ul>
-            <li><b>Location:</b></li>
-              {{#with location}}
-                  <p>{{address}}</p>
-                  <p>{{city}}</p>
-                  <p>{{country}}</p>
-            {{/with}}
-         </ul>
-            <li><b>Exhibits:</b></li>
-            <ul>
-            {{#each exhibits}}
-               <p>{{name}}</p>
-               <p>{{#if artist}} Leonardo da Vinci{{/if}}</p>
-               <p>{{description}}</p>
-               <p>{{#if audio_guide}}{{/if}}</p>
-            {{/each}}
-            {{/with}}
-            </ul>
-            <li><b>Guide:</b></li>
-            <ul>
-           {{#with guide}}
-               <p>{{name}}</p>
-               <p>{{language}}</p>
-               <p>{{rating}}</p>
-           {{/with}}
-            </ul>
-          
-         </ul>
-         
-         {{/with}}
-         {{/with}}
-         <div>
-          {{#with program.[1]}}
-               <h3>{{name}}</h3>
-               <ul>
-               <p>{{type}}</p>
-               <p>{{duration}}</p>
-          
+      {{#with excursion}}
+         {{#with program.[0]}}
             {{#with details}}
-            {{#with venue}}
-             <b><em>{{name}}</em></b>
-             </ul>
-            {{#with location}}
-               <ul>
-               <li><b>Location:</b></li>
-               <p>{{address}}</p>
-               <p>{{city}}</p>
-               <p>{{country}}</p>
+                 <ul>
+                  <li>
+                  <b>Museum:</b>
+                  </li>
+               {{#with museum}}
+                  <em>{{name}}</em>
+                  </ul>
+                      <ul>
+                        <li><b>Location:</b></li>
+                     {{#with location}}
+                        <p>{{address}}</p>
+                        <p>{{city}}</p>
+                        <p>{{country}}</p>
+                     {{/with}}
+                     </ul>
+                        <li><b>Exhibits:</b></li>
+                       <ul>
+                        {{#each exhibits}}
+                           <p>{{name}}</p>
+                           <p>{{#if artist}} Leonardo da Vinci{{/if}}</p>
+                           <p>{{description}}</p>
+                           <p>{{#if audio_guide}}{{/if}}</p>
+                        {{/each}}
+               {{/with}}
+                        </ul>
+                           <li><b>Guide:</b></li>
+                           <ul>
+                        {{#with guide}}
+                              <p>{{name}}</p>
+                              <p>{{language}}</p>
+                              <p>{{rating}}</p>
+                        {{/with}}
+                            </ul>
+          
+                     </ul>
+         
+               {{/with}}
             {{/with}}
-               </ul>
-            {{/with}}
-            <ul>
-              <li><b>Performers:</b></li>
-            {{#each performers}}
-            <p>{{name}}</p>
-            <p>{{type}}</p>
-            {{/each}}
-            </ul>
-            {{#with guide}}
-            <ul>
-            <li><b>Guide:</b></li>
-               <p>{{name}}</p>
-               <p>{{language}}</p>
-               <p>{{rating}}</p>
-            </ul>
-            {{/with}}
-            {{/with}}
+                     <div>
+                  {{#with program.[1]}}
+                        <h3>{{name}}</h3>
+                     <ul>
+                        <p>{{type}}</p>
+                        <p>{{duration}}</p>
+                  
+                     {{#with details}}
+                        {{#with venue}}
+                              <b><em>{{name}}</em></b>
+                     </ul>                                                   
+                           {{#with location}}
+                              <ul>
+                              <li><b>Location:</b></li>
+                              <p>{{address}}</p>
+                              <p>{{city}}</p>
+                              <p>{{country}}</p>
+                           {{/with}}
+                               </ul>
+                        {{/with}}
+                               <ul>
+                               <li><b>Performers:</b></li>
+                                 {{#each performers}}
+                                     <p>{{name}}</p>
+                                     <p>{{type}}</p>
+                                  {{/each}}
+                                       </ul>
+                                 {{#with guide}}
+                                     <ul>
+                                     <li><b>Guide:</b></li>
+                                    <p>{{name}}</p>
+                                    <p>{{language}}</p>
+                                    <p>{{rating}}</p>
+                                     </ul>
+                                 {{/with}}
+                     {{/with}}
          {{/with}}
-         </div>
+                      </div>
        
-         {{/with}}
-         {{/with}}
+      {{/with}}
+   {{/with}}
 
          
 </div>
