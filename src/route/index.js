@@ -714,6 +714,7 @@ router.get('/facebook', function (req, res) {
         name: 'John Doe',
         gender: 'Male',
         age: 30,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKxVVlSLS4gpC8mpjqEqDzf-chObn9YeuNng&usqp=CAU',
         friends: [
           {
             id: 2,
@@ -786,6 +787,7 @@ router.get('/facebook', function (req, res) {
         name: 'Amy Lee',
         gender: 'Female',
         age: 30,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSB6mR1_wKbf94U1nQTugQceyfGI6Kjay3pw&usqp=CAU',
         friends: [
           {
             id: 15,
