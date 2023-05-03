@@ -16,6 +16,7 @@
                     {{#each friends}} 
                             <ul class="list-group">
                                 <li class="list-group-item"><h6>{{name}}</h6>gender: {{gender}} age: {{age}}</li>
+                               <br>
                                 {{#if groups}}
                              <p class="alert alert-primary" role="alert">Groups</p>
                         {{#each groups}}
@@ -34,7 +35,7 @@
                         {{/each}}
                             </ul>
                     {{/each}}                               
-                           <hr>
+                           <br>
                            {{#if groups}}
                              <p class="alert alert-primary" role="alert">Groups</p>
                         {{#each groups}}
