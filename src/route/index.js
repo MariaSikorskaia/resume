@@ -713,8 +713,9 @@ router.get('/mac', function (req, res) {
     layout: 'basic',
     name: 'Apple MacBook Pro',
     description: 'The ultimate notebook for power users',
-    price: 1999.99,
+    price: '1999.99$',
     category: 'Computers & Tablets',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlkKa1WHrjwZOoJIyijy5nwuxNbdciJAt8oQ&usqp=CAU',
     features: {
       processor: {
         brand: 'Intel',
@@ -776,15 +777,15 @@ router.get('/mac', function (req, res) {
       accessories: [
         {
           name: 'Apple Magic Keyboard',
-          price: 99.99,
+          price: '99.99$',
         },
         {
           name: 'Apple Magic Mouse 2',
-          price: 79.99,
+          price: '79.99$',
         },
         {
           name: 'USB-C to USB Adapter',
-          price: 19.99,
+          price: '19.99$',
         },
       ],
     },
