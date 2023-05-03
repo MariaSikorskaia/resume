@@ -713,6 +713,7 @@ router.get('/car', function (req, res) {
     model: 'Camry',
     year: 2022,
     color: 'silver',
+    img: 'https://cdn.riastatic.com/photosnewr/auto/new_auto_storage/toyota-camry__1839786-620x465x72.webp',
     features: {
       interior: {
         seats: {
@@ -788,14 +789,14 @@ router.get('/car', function (req, res) {
       combined: 32,
     },
     price: {
-      base: 25900,
-      destination: 995,
+      base: '25900$',
+      destination: '995$',
       options: {
-        navigation: 1200,
-        moonroof: 800,
-        premium_paint: 595,
+        navigation: '1200$',
+        moonroof: '800$',
+        premium_paint: '595$',
       },
-      total: 28990,
+      total: '28990$',
     },
   })
   //                  ↑↑ сюди вводимо JSON дані
