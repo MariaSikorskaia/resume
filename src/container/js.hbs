@@ -5,143 +5,73 @@
     <span>{{history.year}}</span>
     <span>{{history.founder}}</span>
 </div>
-    <br>
-    <br>
- <button type="button" class="btn btn-secondary">Types</button>
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">       
-        <li class="breadcrumb-item active" aria-current="page">Number</li>
-        <li class="breadcrumb-item active" aria-current="page">String</li> 
-        <li class="breadcrumb-item active" aria-current="page">Boolean</li> 
-        <li class="breadcrumb-item active" aria-current="page">Null</li> 
-        <li class="breadcrumb-item active" aria-current="page">Undefined</li> 
-        <li class="breadcrumb-item active" aria-current="page">Symbol</li> 
-        <li class="breadcrumb-item active" aria-current="page">Object</li> 
-  </ol>
-</nav>
- <button type="button" class="btn btn-secondary">Syntax</button>
-   
-    <nav style="--bs-breadcrumb-divider:" aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">variables:</a></li>
-        <li class="breadcrumb-item active" aria-current="page">'var', 'let', 'const'</li>
-      </ol>
-    </nav>
-        <nav style="--bs-breadcrumb-divider:" aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">functions:</a></li>
-            <li class="breadcrumb-item active" aria-current="page">'function'</li>
-          </ol>
-        </nav>
-            <nav style="--bs-breadcrumb-divider:" aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">conditionals:</a></li>
-                <li class="breadcrumb-item active" aria-current="page">'if', 'else', 'switch'</li>
-              </ol>
-            </nav>
-             <nav style="--bs-breadcrumb-divider:" aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">loops: </a></li>
-                <li class="breadcrumb-item active" aria-current="page">'for', 'while', 'do-while'</li>
-              </ol>
-            </nav>
-             <nav style="--bs-breadcrumb-divider:" aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">classes:</a></li>
-                <li class="breadcrumb-item active" aria-current="page">'class'</li>
-              </ol>
-            </nav>
-            {{!-- <button type="button" class="btn btn-info">Features</button>
-                <br>
-                <br>
-                <ul>
-                <p>'First-class functions'</p>
-                <p>'Closures'</p>
-                <p>'Dynamic typing'</p>
-                <p>'Prototype-based inheritance'</p>
-                <p>'Asynchronous programming with Promises and async/await'</p>
-                <p>'Modules with import/export statements'</p>
-                </ul>
-                 <button type="button" class="btn btn-info">Libraries</button>
-                        <br>
-                        <br>   
-                        <ul>
-                        <p>'jQuery'</p>
-                        <p>'React'</p>
-                        <p>'Angular'</p>
-                        <p>'Vue'</p>
-                        <p>'Node.js'</p>
-                        <p>'Express.js'</p>
-                        <p>'Lodash'</p>
-                        <p>'Moment.js'</p>
-                        </ul>
-                     <button type="button" class="btn btn-info">Tools</button>
-                            <br>
-                            <br>   
-                            <ul>
-                            <p>'Babel'</p>
-                            <p>'Webpack'</p>
-                            <p>'ESLint'</p>
-                            <p>'Jest'</p>
-                            <p>'Mocha'</p>
-                            <p>'Chai'</p>
-                            <p>'Selenium'</p>
-                            <p>'Cypress'</p>
-                            </ul>
-                         <button type="button" class="btn btn-info">community</button>
-                            <br>
-                            <br>
-                            <ul>
-                        {{#each community}}
-                            <p>{{name}}</p>
-                            <p>{{type}}</p>
-                        {{/each}}
-                            </ul> --}}
-         <button type="button" class="btn btn-secondary">Features</button>
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">       
-        <li class="breadcrumb-item active" aria-current="page">First-class functions</li>
-        <li class="breadcrumb-item active" aria-current="page">Closures</li> 
-        <li class="breadcrumb-item active" aria-current="page">Dynamic typing</li> 
-        <li class="breadcrumb-item active" aria-current="page">Prototype-based inheritance</li> 
-        <li class="breadcrumb-item active" aria-current="page">Asynchronous programming with Promises and async/await'</li> 
-        <li class="breadcrumb-item active" aria-current="page">Modules with import/export statements</li>         
-  </ol>
-</nav>
- <button type="button" class="btn btn-secondary">Libraries</button>
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">       
-        <li class="breadcrumb-item active" aria-current="page">JQuery</li>
-        <li class="breadcrumb-item active" aria-current="page">React</li> 
-        <li class="breadcrumb-item active" aria-current="page">Angular</li> 
-        <li class="breadcrumb-item active" aria-current="page">Vue</li> 
-        <li class="breadcrumb-item active" aria-current="page">Node.js</li> 
-        <li class="breadcrumb-item active" aria-current="page">Express.js</li> 
-        <li class="breadcrumb-item active" aria-current="page">Lodash</li>
-        <li class="breadcrumb-item active" aria-current="page">Moment.js</li>        
-  </ol>
-</nav>
- <button type="button" class="btn btn-secondary">Tools</button>
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">       
-        <li class="breadcrumb-item active" aria-current="page">Babel</li>
-        <li class="breadcrumb-item active" aria-current="page">Webpack</li> 
-        <li class="breadcrumb-item active" aria-current="page">ESLint</li> 
-        <li class="breadcrumb-item active" aria-current="page">Jest</li> 
-        <li class="breadcrumb-item active" aria-current="page">Mocha</li> 
-        <li class="breadcrumb-item active" aria-current="page">Chai</li> 
-        <li class="breadcrumb-item active" aria-current="page">Selenium</li>
-        <li class="breadcrumb-item active" aria-current="page">Cypress</li>        
-  </ol>
-</nav>
- <button type="button" class="btn btn-secondary">community</button>
-      <br>
-      <br>
-        <ul>
-         {{#each community}}
-            <li>
+     <br>
+     <br>
+    <button type="button" class="btn btn-secondary">Types</button>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">       
+      <li class="breadcrumb-item active" aria-current="page">{{#if types}} {{[types]}} {{/if}}</li>
+    </ol>
+  </nav>
+    <button type="button" class="btn btn-secondary">Syntax</button>
+   {{#with syntax}}
+      <nav style="--bs-breadcrumb-divider:" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">variables:</li>
+          <li class="breadcrumb-item active" aria-current="page">{{#if variables}} {{[variables]}} {{/if}}</li>
+        </ol>
+      </nav>
+      <nav style="--bs-breadcrumb-divider:" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">functions:</li>
+          <li class="breadcrumb-item active" aria-current="page"><li class="breadcrumb-item active" aria-current="page">{{#if functions}} {{[functions]}} {{/if}}</li></li>
+        </ol>
+      </nav>
+      <nav style="--bs-breadcrumb-divider:" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">conditionals:</li>
+          <li class="breadcrumb-item active" aria-current="page">{{#if conditionals}} {{[conditionals]}} {{/if}}</li>
+        </ol>
+      </nav>
+      <nav style="--bs-breadcrumb-divider:" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">loops: </li>
+          <li class="breadcrumb-item active" aria-current="page">{{#if loops}} {{[loops]}} {{/if}}</li>
+        </ol>
+      </nav>
+      <nav style="--bs-breadcrumb-divider:" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">classes:</li>
+          <li class="breadcrumb-item active" aria-current="page">{{#if classes}} {{[classes]}} {{/if}}</li>
+        </ol>
+      </nav>
+    {{/with}}
+        <button type="button" class="btn btn-secondary">Features</button>
+            <br>
+          <ul>
+            <br>
+            <p>{{#if features}} {{[features]}} {{/if}}</p>
+          </ul> 
+        <button type="button" class="btn btn-secondary">Libraries</button>      
+          <ul>
+            <br> 
+            <p>{{#if libraries}} {{[libraries]}} {{/if}}</p>
+          </ul>
+        <button type="button" class="btn btn-secondary">Tools</button>
+            <br>    
+          <ul>
+            <br>
+            <p>{{#if tools}} {{[tools]}} {{/if}}</p>
+          </ul>
+        <button type="button" class="btn btn-secondary">community</button>
+            <br>
+          <ul>
+            <br>
+            {{#each community}}
               <p>{{name}}</p>
               <p>{{type}}</p>
-            </li>
-         {{/each}}
-        </ul> 
+            {{/each}}
+          </ul>
+        
+
+
