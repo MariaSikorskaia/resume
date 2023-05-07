@@ -1,0 +1,113 @@
+<div>
+    {{#with navigation}}
+    <div class="card mb-5">
+        <ul class="nav p-3">
+            {{#each links}}
+                {{#if @last}}
+                    <li><a class="nav-link disabled" href="{{href}}" target="_blank">{{text}}</a></li>
+                {{else}}
+                    <li class="nav-item ms-3">
+                    <li><a class="nav-link" href="{{href}}" target="_blank">{{text}}</a></li>
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+    {{/with}}
+
+    {{#with newsBlock}}
+        <h4 class="fw-medium text-center">{{title}}</h4>
+        <div class="row">
+            {{#each cards}}
+                <div class="col-3 g-3 mb-4 mt-4">        
+                    <div class="card text-bg-secondary">
+                        <h5 class="card-header">{{title}}
+                            {{#if isTop}} 
+                                <div class="badge rounded-pill text-bg-success">Top</div>
+                            {{/if}} 
+                            {{#if isNew}} 
+                                <div class="badge rounded-pill text-bg-danger">New</div>
+                            {{/if}}</h5>
+                                <div class="card-body text-bg-secondary">
+                                    <h5 class="card-title">{{description}}</h5>
+                                </div>
+                    </div>
+                </div>           
+            {{/each}}
+        </div>
+    {{/with}}
+    <hr>
+    {{#with goodsBlock}}
+        <ul class="nav nav-tabs p-4">
+            {{#each tabs}}
+                <li class="nav-link {{#if isActive}} active {{/if}} {{#if isDisabled}} disabled {{/if}}">
+                {{text}}  
+                </li>
+            {{/each}}
+        </ul>
+
+        <div class="row">
+            {{#each cards}}
+                <div class="col-4 g-3 mt-4 mb-4">
+                <div class="card">   
+                    <img class="card-img-top" src="{{image}}" alt="{{alt}}">        
+                        <div class="card-body">
+                            <h5 class="card-title">{{title}}
+                                {{#if isHot}} 
+                                    <div class="badge rounded-pill text-bg-warning">Hot</div>
+                                {{/if}} 
+                                {{#if isNew}} 
+                                    <div class="badge rounded-pill text-bg-primary">New</div>
+                                {{/if}} 
+                            </h5>
+                                <p>{{description}}</p>
+                        </div>
+                </div>
+                </div>
+            {{/each}}
+        </div>
+    {{/with}}
+    <hr>
+    {{#with subscribe}}
+        <div class="card text-bg-secondary mt-5 mb-5">
+        <div class="card-body">
+             <h2 class="pb-2">{{header}}</h2>
+            <div>{{description}}</div>
+                {{#each buttons}}
+                <div class="d-grid gap-3 col-3 p-1 m-1">
+                    <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    {{/with}}
+    <hr>
+
+      {{#with service}}
+        <div class="card text-bg-success mt-5  mb-5">
+        <div class="card-body">
+             <h2 class="text-center pb-3">{{title}}</h2>
+             <div class="text-center">{{description}}</div>
+                {{#each buttons}}
+                <div class=" mx-auto d-grid gap-3 col-3 p-1 m-1">
+                    <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                </div>
+                {{/each}}
+        </div>       
+        </div>
+    {{/with}}
+    <hr>
+    <div class="row g-5"> 
+        {{#each footer}}
+            <div class="nav col-2 ps-3">  
+                <div> 
+                    {{#each this}} 
+                        <div>
+                            <a class="nav-link active {{#if @last}} disabled {{/if}}" href="{{this.link}}" target="_blank">{{this.text}}</a>
+                        </div>
+                    {{/each}} 
+                </div>
+            </div>
+        {{/each}}
+    </div>
+<hr>
