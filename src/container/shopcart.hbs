@@ -1,6 +1,6 @@
 {{#with navigation}}
     <div class="card m-2 ms-1">
-        <ul class="p-3">
+        <ul class="nav p-3">
             {{#each links}}
                 {{#if @last}}
                     <li><a class="nav-link disabled" href="{{href}}" target="_blank">{{text}}</a></li>
@@ -78,18 +78,60 @@
             <img src="{{image}}" class="card-img-top" alt="{{description}}">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-6">
-                <h5 class="card-title">{{title}}</h5>
+                    <div class="col-8">
+                        <h5 class="card-title">{{title}}</h5>
                     </div>
-                    <div class="col-6">
-                        <button class="{{#if isHot}} btn btn-primary Hot {{else}} btn btn-warning New"></button>
+                    <div class="col-4">
+                        {{#if isHot}} 
+                        <button class="badge rounded-pill text-bg-primary">Hot</button>
+                        {{else}}
+                        <button class="badge rounded-pill text-bg-warning">New</button>
+                        {{/if}}
                     </div>
                 </div>
                     <p class="card-text">{{description}}</p>
-                    <a href="#" class="btn btn-primary"></a>
             </div>
         </div>
     </div>
     {{/each}}
 {{/with}}
+</div>
+
+<div class="mb-5 mt-5">
+    <hr>
+</div>
+{{#with subscribe}}
+<div class="row">
+    <div class="card text-bg-secondary mb-3">
+        <div class="col-8">
+        <div class="card-body">
+            <h2 class="card-title pb-3">{{header}}</h2>
+            <p class="card-text pb-3">{{description}}</p>
+        </div>
+        </div>
+            <div class="col-2">
+            {{#each buttons}}
+                <a href="{{link}}" class="btn btn-primary mb-2 ms-3">{{text}}</a>
+            {{/each}}
+            </div>
+        </div>
+    </div>
+{{/with}}
+
+<div class="mb-5 ms-5">
+    <hr>
+</div>
+ <div class="row g-3"> 
+        {{#each footer}}
+            <div class="nav col-2">  
+                <div> 
+                    {{#each this}} 
+                        <div>
+                            <a class="nav-link active text-lowercase {{#if @last}} disabled {{/if}}" href="{{this.link}}" target="_blank">{{this.text}}</a>
+                        </div>
+                    {{/each}} 
+                </div>
+            </div>
+        {{/each}}
+    </div>
 </div>
