@@ -787,7 +787,7 @@ router.get('/shopreview', function (req, res) {
           },
         ],
         seller: {
-          title: 'Продавець',
+          title: 'Продавець:',
           value: 'Machinery',
         },
       },
@@ -802,11 +802,11 @@ router.get('/shopreview', function (req, res) {
         },
         reviewBody: {
           seller: {
-            title: 'Продавець',
+            title: 'Продавець:',
             value: 'Machinery',
           },
           rating: {
-            title: 'Оцінка',
+            title: 'Оцінка:',
             value: '5/5',
           },
           text: [
