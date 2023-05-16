@@ -1,5 +1,5 @@
 {{#with navigation}}
-    <div class="card mt-2">
+    <div class="card mt-2 mb-5 ms-1">
         <ul class="nav p-2">
             {{#each links}}
                 {{#if @last}}
@@ -15,11 +15,11 @@
 
 <div class="row">
     
-        <div class="col-8 ms-1">  
+        <div class="col-8">  
             {{#with formBlock}}     
-            <h2 class="mt-5">{{header}}</h2>
+            <h2 class="mt-3 ms-1">{{header}}</h2>
             {{#with rating}}
-                <p class="mt-3">{{title}} {{value}}</p>
+                <p class="mt-3 ms-1">{{title}} {{value}}</p>
             {{/with}}
             {{#with actionBlock}}
                     <ul class="nav nav-tabs">
@@ -37,7 +37,7 @@
                     </ul>
                     <hr class="mt-5 mb-5">
                     {{#with report}}
-                        <div class="card">
+                        <div class="card ms-1">
                             <div class="card-body">
                                 <p>{{title}}</p>
                                 <a href="{{button.link}}" class="btn btn-secondary">{{button.text}}</a>
@@ -47,16 +47,16 @@
             {{/with}}
             <hr class="mt-5 mb-5">
             {{#with feedbackBlock}}
-                <h2 class="mt-3 mb-5">{{title}}</h2>
+                <h2 class="mt-3 mb-5 ms-1">{{title}}</h2>
                 {{#each buttons}}
                     {{#if isWarning}}
-                        <a href="{{link}}" class="btn btn-warning mb-5">{{text}}</a>
+                        <a href="{{link}}" class="btn btn-warning mb-3 ms-1">{{text}}</a>
                     {{/if}}  
                     {{#if isSuccess}}
-                        <a href="{{link}}" class="btn btn-success mb-5">{{text}}</a>
+                        <a href="{{link}}" class="btn btn-success mb-3 ms-1">{{text}}</a>
                     {{/if}} 
                     {{#if isDanger}}
-                        <a href="{{link}}" class="btn btn-danger mb-5">{{text}}</a>
+                        <a href="{{link}}" class="btn btn-danger mb-3 ms-1">{{text}}</a>
                     {{/if}}     
                 {{/each}}
             {{/with}}
@@ -100,7 +100,7 @@
 </div>
 <hr class="mt-5 mb-5">
 
-<div class="card">
+<div class="card ms-1">
     <div class="card-body">
         {{#each reviewList}}
         <div class="card">
@@ -127,14 +127,13 @@
                         <b>{{title}}</b>
                         <p>{{text}}</p>
                     {{/with}}
-                        {{#each images}}
+                    {{#each images}}
                         <img src="{{this}}" class="rounded" alt="...">
-                        {{/each}}
-               
+                    {{/each}}             
             </div>
         </div>
         
-        <div class="card ms-4 me-3 mt-3">
+        <div class="card ms-4 m-3">
             <div class="card-body">
                 {{#each coments}}
                     <b>{{userName}}</b>
@@ -143,13 +142,13 @@
                 {{/each}}
             </div>
         </div>
-               {{/with}}
+                 {{/with}}
         {{/each}}
     </div>
 </div>
 
 {{#with service}}
-    <div class="card text-bg-success text-center mb-3 mt-3">
+    <div class="card text-bg-success text-center mb-3 mt-4 ms-1">
     <div class="card-body">
         <h2 class="card-title mb-3">{{title}}</h2>
         <p class="card-text">{{description}}</p>
