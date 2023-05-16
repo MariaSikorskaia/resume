@@ -1,0 +1,54 @@
+<section>
+     <h2><span class="badge bg-primary">Facebook</span></h2>
+     <hr>
+</section>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {{#each users}}
+            <div class="col-5">
+                <div class="card">
+                        <img src={{img}}>
+                    <div class="card-body">
+                
+                        <h5 class="card-title">{{name}}</h5>
+                        <hr>
+                        <p>gender: {{gender}} age: {{age}}</p> 
+                        <p class="alert alert-primary" role="alert">Friends</p>
+                    {{#each friends}} 
+                            <ul class="list-group">
+                                <li class="list-group-item"><h6>{{name}}</h6>gender: {{gender}} age: {{age}}</li>
+                               <br>
+                                {{#if groups}}
+                             <p class="alert alert-primary" role="alert">Groups</p>
+                        {{#each groups}}
+                            <ul class="list-group">
+                                <li class="list-group-item"><h6 >{{name}}</h6>{{description}}</li>
+                                 <li class="list-group-item"><span class="d-block p-1 text-bg-secondary">members</span></li>
+                            {{#each members}}                             
+                                <li class="list-group-item"><h6>{{name}}</h6> gender: {{gender}} age: {{age}}</li>
+                            {{/each}}
+                            </ul>                              
+                        {{/each}}
+                        {{/if}}
+                        {{#each mutual_friends}}     
+                                <li class="list-group-item"><span class="d-block p-1 text-bg-secondary">mutual friends</span></li>
+                                <li class="list-group-item"><h6>{{name}}</h6> gender: {{gender}} age: {{age}}</li>
+                        {{/each}}
+                            </ul>
+                    {{/each}}                               
+                           <br>
+                           {{#if groups}}
+                             <p class="alert alert-primary" role="alert">Groups</p>
+                        {{#each groups}}
+                            <ul class="list-group">
+                                <li class="list-group-item"><h6 >{{name}}</h6>{{description}}</li>
+                            <li class="list-group-item"><span class="d-block p-1 text-bg-secondary">members</span></li>
+                            {{#each members}}                             
+                                    <li class="list-group-item"><h6>{{name}}</h6> gender: {{gender}} age: {{age}}</li>
+                            {{/each}}
+                            </ul>                              
+                        {{/each}}
+                        {{/if}}
+                 </div>
+            </div>
+    </div>
+    {{/each}}
