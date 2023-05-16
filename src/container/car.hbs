@@ -1,0 +1,159 @@
+
+<div class="card" style="width: 18rem;">
+     <img src={{img}} class="card-img-top" alt="...">
+    <div class="card-body">
+       <h4 class="card-title">{{make}}</h4>
+        <h6 class="card-title">{{model}}</h6>
+          <p class="card-text">year: <b>{{year}}</b>; color: <b>{{color}}</b></p>
+
+            <p>
+        {{#with features}}    
+                <a class="btn btn-secondary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Interior</a>
+                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Exterior</button>
+                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Safety</button>
+                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">Assistance</button>
+                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5">Engine</button>
+                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">Fuel_economy</button>
+                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample7" aria-expanded="false" aria-controls="multiCollapseExample7">Price</button>
+            
+            </p>
+                <div class="row">
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                    {{#with interior.seats}}
+                        <b>seats:</b>
+                        <span>material: {{material}}</span>
+                        <span>color: {{color}}</span>
+                        <span>heated: {{#if heated}} {{true}} {{/if}}</span>
+                        <span>ventilated: {{#if ventilated}} {{true}} {{/if}}</span>
+                        <b>dashboard:</b>
+                    {{/with}}    
+                {{#with interior.dashboard}}
+                    <span>material: {{material}}</span>
+                    <span>color: {{color}}</span>
+                    <span>display:</span>
+                    {{#if display}}              
+                            {{display.type}}
+                            {{display.size}}
+                            {{display.resolution}}
+                            {{#if display.touchscreen}} {{true}} {{/if}}
+                    {{/if}}
+                {{/with}}    
+                {{#with interior.audio}}
+                    <b>audio:</b>
+                    <span>system: {{system}}</span>
+                    <span>speakers: {{speakers}}</span>
+                    <span>subwoofer: {{#if subwoofer}} {{true}} {{/if}}</span>
+                    <span>bluetooth: {{#if bluetooth}} {{true}} {{/if}}</span>
+                    <span>USB: {{#if USB}} {{true}} {{/if}}</span>
+                {{/with}} 
+                    </div>
+                    </div>
+                </div>
+                </div>
+  
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                    {{#with exterior.wheels}}
+                    <b>wheels:</b>
+                        <span>size: {{size}}</span>
+                        <span>type: {{type}}</span>
+                        <span>color: {{color}}</span>
+                    {{/with}}
+                    <b>headlights:</b>
+                    {{#with exterior.headlights}}
+                        <span>type: {{type}}</span>
+                        <span>brightness: {{brightness}}</span>
+                        <span>automatic: {{#if automatic}} {{true}} {{/if}}</span>
+                    {{/with}}   
+                    {{#with exterior.sunroof}} 
+                    <b>sunroof:</b>
+                        <span>type: {{type}}</span>
+                        <span>size: {{size}}</span>
+                        <span>automatic: {{#if automatic}} {{true}} {{/if}}</span>
+                    {{/with}}
+                </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class="card card-body">
+                    {{#with safety.airbags}}
+                    <b>airbags:</b>
+                        <span>front: {{front}}</span>
+                        <span>side: {{side}}</span>
+                        <span>knee: {{knee}}</span>
+                        <span>rear: {{rear}}</span>
+                    {{/with}}    
+                </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample4">
+                <div class="card card-body">
+                        <b>blind_spot_monitoring:</b>{{#if assistance.blind_spot_monitoring}} {{true}} {{/if}}
+                        <b>rear_cross_traffic_alert:</b>{{#if assistance.rear_cross_traffic_alert}} {{true}} {{/if}}
+                        <b>lane_departure_warning:</b>{{#if assistance.lane_departure_warning}} {{true}} {{/if}}
+                        <b>adaptive_cruise_control:</b>{{#if assistance.adaptive_cruise_control}} {{true}} {{/if}}
+                        <b>collision_warning:</b>{{#if assistance.collision_warning}} {{true}} {{/if}}
+                </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample5">
+                <div class="card card-body">
+           {{/with}}         
+                    {{#with engine}}
+                        <b>type:</b><span>{{type}}</span>
+                        <b>displacement:</b><span> {{displacement}}</span>
+                        <b>horsepower:</b><span>{{horsepower}}</span>
+                        <b>torque:</b><span>{{torque}}</span>
+                        <b>transmission:</b>
+                        {{#with transmission}}
+                            <span>type: {{type}}</span>
+                            <span>gears: {{gears}}</span>   
+                        {{/with}}
+                    {{/with}}    
+                </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample6">
+                <div class="card card-body">
+                    {{#with fuel_economy}}
+                    <b>city:</b><span>{{city}}</span>
+                    <b>highway:</b><span>{{highway}}</span>
+                    <b>combined:</b><span>{{combined}}</span>
+                    {{/with}}
+                </div>
+                </div>
+             </div>
+
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample7">
+                <div class="card card-body">
+                    {{#with price}}
+                        <b>base:</b><span>{{base}}</span>
+                        <b>destination:</b><span>{{destination}}</span>
+                        {{#with options}}
+                        <b>options:</b><span>{{options}}</span>
+                        <ul>
+                        <h6>navigation:</h6><span>{{navigation}}</span>
+                        <h6>moonroof:</h6><span>{{moonroof}}</span>
+                        <h6>premium_paint:</h6><span>{{premium_paint}}</span>
+                        </ul>
+                        {{/with}}
+                        <b>total:</b><span>{{total}}</span>
+                    {{/with}}    
+                </div>
+                </div>
+            </div>
+        {{!-- {{/with}}     --}}
+    </div>
+</div>
