@@ -1,0 +1,79 @@
+<div class="card" style="width: 18rem;">
+        <img src={{img}}class="card-img-top" alt="Apple MacBook Pro">
+    <div class="card-body">
+        <h4 class="card-title">{{name}}</h4>
+        <p class="card-text"></p>{{description}}</p>
+        <h4><span class="badge bg-warning">{{price}}</span></h4>
+        <h5>{{category}}</h5>
+        <hr>
+        <div>
+            <ul class="list-group">
+            {{#with features}}
+                <li class="list-group-item"><b>processor:</b> 
+                {{#if processor}} 
+                    {{#with processor}}
+                        {{brand}} {{model}} {{speed}} {{cores}} {{cache}}
+                     {{/with}}
+                {{/if}}</li>
+                        <li class="list-group-item"><b>memory:</b> {{#if memory}} 
+                    {{#with memory}}
+                         {{type}} {{size}} {{speed}} 
+                    {{/with}}
+                {{/if}}</li>
+                        <li class="list-group-item"><b>storage:</b> 
+                    {{#if storage}} 
+                        {{#with storage}}
+                        {{type}} {{size}} 
+                         {{/with}}
+                    {{/if}}</li>
+                        <li class="list-group-item"><b>display:</b> 
+                    {{#if display}} 
+                        {{#with display}}
+                        {{size}} {{resolution}} {{technology}} {{color_space}} {{brightness}} {{refresh_rate}}
+                        {{/with}}
+                    {{/if}}</li>
+                        <li class="list-group-item"><b>graphics:</b> 
+                    {{#if graphics}} 
+                        {{#with graphics}}
+                        {{brand}} {{model}} {{memory}}
+                        {{/with}}
+                    {{/if}}</li>
+               
+                {{#each ports}}
+                    <li class="list-group-item"><b>ports:</b>{{type}} {{count}} 
+                    {{#if features}} {{[features]}} {{/if}} </li>
+                {{/each}}    
+                     <li class="list-group-item"><b>battery:</b> 
+                    {{#if battery}} 
+                        {{#with battery}}
+                        {{type}} {{capacity}} {{life}}
+                        {{/with}}
+                    {{/if}}</li>
+                        <li class="list-group-item"><b>weight:</b> 
+                    {{#if weight}} 
+                        {{weight}}     
+                    {{/if}}</li>
+                        <li class="list-group-item"><b>dimensions:</b> 
+                    {{#if dimensions}} 
+                        {{#with dimensions}}
+                        {{height}} {{width}} {{depth}}
+                        {{/with}}
+                    {{/if}}</li>
+                         <li class="list-group-item"><b>operating_system:</b> 
+                    {{#if operating_system}} 
+                        {{operating_system}}     
+                    {{/if}}</li>
+                    <div>
+            </ul>             <br>
+                             <li class="list-group-item"><h5>Accessories:</h5></li>                           
+                        {{#if accessories}} 
+                           {{#each accessories}}
+                           {{name}}  
+                           <button type="button" class="btn btn-warning btn-sm">{{price}}</button>
+                           {{/each}}
+                        {{/if}}
+                    </div>
+            {{/with}}  
+    </div>  
+</div>
+
