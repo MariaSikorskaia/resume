@@ -1,5 +1,9 @@
 html {
-  max-width: 720px;
+<<<<<<< HEAD
+  max-width: 980px;
+=======
+  max-width: 1080px;
+>>>>>>> master
 }
 
 body {
