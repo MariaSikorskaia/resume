@@ -2517,6 +2517,7 @@ router.get('/mac', function (req, res) {
     description: 'The ultimate notebook for power users',
     price: 1999.99,
     category: 'Computers & Tablets',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlkKa1WHrjwZOoJIyijy5nwuxNbdciJAt8oQ&usqp=CAU',
     features: {
       processor: {
         brand: 'Intel',
