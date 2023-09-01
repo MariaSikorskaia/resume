@@ -19,24 +19,31 @@
    {{#with main}}
     <main>
        <section>
-      <b> {{> title big=true data="Summary"}}</b>
-       <div>
-            <p>
-                {{summary.text }}
-            </p>
-        </div>
-       </section>
-
-       {{#with experience}}
+        <div class="row">
+  <div class="col-sm-6 mb-3">
+    <div class="card pb-5">
+      <div class="card-body">
+        <h5 class="card-title">{{> title big=true data="Summary"}}</h5>
+        <p class="card-text">{{summary.text }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+         {{#with experience}}
         <section>
-       <b> {{> title big=false data="Other Experince"}}</b>
-            <div>
-          <p>
+       <h5>{{> title big=false data="Other Experince"}}</h5>
+          <p class="card-text">
              {{text}}
           </p>
-            </div>
         </section>
         {{/with}}
+      </div>
+    </div>
+  </div>
+</div>
+       </section>
     </main>
    {{/with}}
 </div>

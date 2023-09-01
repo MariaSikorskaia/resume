@@ -7,10 +7,14 @@
   {{#with main}}
      <main> 
         <section>
-           <b>{{> title big=true data="All skills"}}</b>
-            <ul>
+          <div class="card">
+            <div class="card-header mb-3">
+              <b>{{> title big=true data="All skills"}}</b>
+            </div>
+
+              <ul class="list-group list-group-flush">
                 {{#each skills}}
-                <li>
+                <div class="ms-3 mb-3">
                   {{name}} 
                   {{#if point includeZero=true}} ({{point}}) {{/if}}
 
@@ -22,17 +26,24 @@
                    (ще вивчаємо)
                    {{/if}}
                   {{/unless}}
-                  </li>
+                </div>
                 {{/each}}
             </ul>
+
+          </div>
         </section>
+
          <section>
+          <div class="card">
+            <div class="card-header mb-3">
               <b> {{> title big=false data="My hobbies"}}</b>
+            </div>
             <ul>
               {{#each hobbies}}
-              <li>{{name}}
+              <div class="mb-3">
+                {{name}}
                   {{#if isMain}} (favourite){{/if}}
-              </li>
+              </div>
               {{/each}}
             </ul>
         </section>

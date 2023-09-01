@@ -1,19 +1,27 @@
 <div>
-    <h1><span class="badge bg-secondary">{{name}}</span></h1>
-    <ul><p>{{description}}</p></ul>
-    <button type="button" class="btn btn-secondary">History</button>
+
+<div class="alert alert-success m-3" role="alert">
+  <h2 class="alert-heading">{{name}}</h2>
+  <p>{{description}}</p>
+</div>
+
+    {{!-- <h1><span class="badge bg-secondary">{{name}}</span></h1>
+    <ul><p>{{description}}</p></ul> --}}
+
+
+    <button type="button" class="btn btn-secondary ms-3">History</button>
     <span>{{history.year}}</span>
     <span>{{history.founder}}</span>
 </div>
      <br>
      <br>
-    <button type="button" class="btn btn-secondary">Types</button>
+    <button type="button" class="btn btn-secondary ms-3">Types</button>
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">       
       <li class="breadcrumb-item active" aria-current="page">{{#if types}} {{[types]}} {{/if}}</li>
     </ol>
   </nav>
-    <button type="button" class="btn btn-secondary">Syntax</button>
+    <button type="button" class="btn btn-secondary ms-3">Syntax</button>
    {{#with syntax}}
       <nav style="--bs-breadcrumb-divider:" aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -52,18 +60,18 @@
             <br>
             <p>{{#if features}} {{[features]}} {{/if}}</p>
           </ul> 
-        <button type="button" class="btn btn-secondary">Libraries</button>      
+        <button type="button" class="btn btn-secondary ms-3">Libraries</button>      
           <ul>
             <br> 
             <p>{{#if libraries}} {{[libraries]}} {{/if}}</p>
           </ul>
-        <button type="button" class="btn btn-secondary">Tools</button>
+        <button type="button" class="btn btn-secondary ms-3">Tools</button>
             <br>    
           <ul>
             <br>
             <p>{{#if tools}} {{[tools]}} {{/if}}</p>
           </ul>
-        <button type="button" class="btn btn-secondary">community</button>
+        <button type="button" class="btn btn-secondary ms-3">community</button>
             <br>
           <ul>
             <br>

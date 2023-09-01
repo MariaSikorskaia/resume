@@ -1232,7 +1232,7 @@ router.get('/task31', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task31', {
-    latyout: 'basic',
+    layout: 'basic',
     navigation: {
       links: [
         {
@@ -2412,6 +2412,7 @@ router.get('/car', function (req, res) {
     model: 'Camry',
     year: 2022,
     color: 'silver',
+    img: 'https://cdn.riastatic.com/photosnewr/auto/new_auto_storage/toyota-camry__1839786-620x465x72.webp',
     features: {
       interior: {
         seats: {
@@ -2516,6 +2517,7 @@ router.get('/mac', function (req, res) {
     description: 'The ultimate notebook for power users',
     price: 1999.99,
     category: 'Computers & Tablets',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlkKa1WHrjwZOoJIyijy5nwuxNbdciJAt8oQ&usqp=CAU',
     features: {
       processor: {
         brand: 'Intel',
@@ -2612,6 +2614,7 @@ router.get('/facebook', function (req, res) {
         name: 'John Doe',
         gender: 'Male',
         age: 30,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKxVVlSLS4gpC8mpjqEqDzf-chObn9YeuNng&usqp=CAU',
         friends: [
           {
             id: 2,
@@ -2684,6 +2687,7 @@ router.get('/facebook', function (req, res) {
         name: 'Amy Lee',
         gender: 'Female',
         age: 30,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSB6mR1_wKbf94U1nQTugQceyfGI6Kjay3pw&usqp=CAU',
         friends: [
           {
             id: 15,

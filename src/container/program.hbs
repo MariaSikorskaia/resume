@@ -1,101 +1,102 @@
-<div>
-   {{#with program}}
-         <h1> {{excursion.name}}</h1>
-         <hr>
-         <b>Location:</b>{{excursion.location.city}} {{excursion.location.country}}
-         <p>Date:{{excursion.date}}</p>
-    
-         <br>
-
-         <h2>{{excursion.program.[0].name}}</h2>
-         <p>{{excursion.program.[0].type}}</p>
-         <p>{{excursion.program.[0].duration}}</p>
-
-         <h3>Details:</h3>
-        
-      {{#with excursion}}
-         {{#with program.[0]}}
-            {{#with details}}
-                 <ul>
-                  <li>
-                  <b>Museum:</b>
-                  </li>
-               {{#with museum}}
-                  <em>{{name}}</em>
-                  </ul>
-                      <ul>
-                        <li><b>Location:</b></li>
-                     {{#with location}}
-                        <p>{{address}}</p>
-                        <p>{{city}}</p>
-                        <p>{{country}}</p>
-                     {{/with}}
-                     </ul>
-                        <li><b>Exhibits:</b></li>
-                       <ul>
-                        {{#each exhibits}}
-                           <p>{{name}}</p>
-                           <p>{{#if artist}} Leonardo da Vinci{{/if}}</p>
-                           <p>{{description}}</p>
-                           <p>{{#if audio_guide}}{{/if}}</p>
-                        {{/each}}
-               {{/with}}
-                        </ul>
-                           <li><b>Guide:</b></li>
-                           <ul>
-                        {{#with guide}}
-                              <p>{{name}}</p>
-                              <p>{{language}}</p>
-                              <p>{{rating}}</p>
-                        {{/with}}
-                            </ul>
-          
-                     </ul>
-         
-               {{/with}}
-            {{/with}}
-                     <div>
-                  {{#with program.[1]}}
-                        <h3>{{name}}</h3>
-                     <ul>
-                        <p>{{type}}</p>
-                        <p>{{duration}}</p>
-                  
+<div class="card m-3">
+      {{#with program}}
+      <h1 class="text-success ms-3">{{excursion.name}}</h1>
+      <div class="card-body ms-3">
+         <h4>Location:</h4> {{excursion.location.city}} {{excursion.location.country}}
+         <h5>Date:</h5> {{excursion.date}}
+      </div>
+</div>
+   <div class="card m-3">
+         <div class="ms-3">
+         <h2 class="text-secondary">{{excursion.program.[0].name}}</h2>
+         <h6>{{excursion.program.[0].type}}</h6>
+         <h6>{{excursion.program.[0].duration}}</h6>
+         </div>
+   </div>
+      <div class="row">
+         <div class="col-sm-6">
+               <div class="card ms-3">
+                  <div class="card-header">
+                     <h4>Details:</h4>
+                  </div>
+                     {{#with excursion}}
+                     {{#with program.[0]}}
                      {{#with details}}
-                        {{#with venue}}
-                              <b><em>{{name}}</em></b>
-                     </ul>                                                   
+                        <ul class="list-group list-group-flush">
+                           <li class="list-group-item"><b>Museum:</b> {{#with museum}}
+                           <em>{{name}}</em></li>
+                           <li class="list-group-item"><b>Location:</b>
                            {{#with location}}
-                              <ul>
-                              <li><b>Location:</b></li>
-                              <p>{{address}}</p>
-                              <p>{{city}}</p>
-                              <p>{{country}}</p>
-                           {{/with}}
-                               </ul>
-                        {{/with}}
-                               <ul>
-                               <li><b>Performers:</b></li>
+                              <span>{{address}}</span>,
+                              <span>{{city}}</span>,
+                              <span>{{country}}</span>
+                           {{/with}}</li>
+
+                              <li class="list-group-item"><b>Exhibits:</b>
+                                 {{#each exhibits}}
+                                    <div>{{name}}</div>
+                                    <div>{{#if artist}} Leonardo da Vinci{{/if}}</div>
+                                    <div>{{description}}</div>
+                                    <div>{{#if audio_guide}}{{/if}}</div>
+                                 {{/each}}
+                              </li>
+                     {{/with}}
+            
+                                 <li class="list-group-item"><b>Guide:</b> 
+                                 {{#with guide}}
+                                    <div>{{name}}</div>
+                                    <div>{{language}}</div>
+                                    <div>{{rating}}</div>
+                                 {{/with}}
+                                 </li>
+                        </ul>
+                     {{/with}}
+                     {{/with}}
+               </div>
+         </div>
+
+         <div class="col-sm-6">
+            <div class="card mb-3 me-3">
+                     {{#with program.[1]}}
+                  <div class="card-header">
+                     <h4>{{name}}</h4>
+                  </div>
+                        <div class="ms-3 mt-2">
+                           <div>{{type}}</div>
+                           <div>{{duration}}</div>
+                              {{#with details}}
+                                 {{#with venue}}
+                                    <b><em>{{name}}</em></b> 
+                        </div>            
+                                    <ul class="list-group list-group-flush">
+                                       <li class="list-group-item"><b>Location:</b>
+                                       {{#with location}}
+                                          <span>{{address}}</span>,
+                                          <span>{{city}}</span>,
+                                          <span>{{country}}</span>
+                                       {{/with}}</li>
+   
+                                 {{/with}}
+                                  <li class="list-group-item"><b>Performers:</b>
                                  {{#each performers}}
                                      <p>{{name}}</p>
                                      <p>{{type}}</p>
                                   {{/each}}
-                                       </ul>
-                                 {{#with guide}}
-                                     <ul>
-                                     <li><b>Guide:</b></li>
-                                    <p>{{name}}</p>
-                                    <p>{{language}}</p>
-                                    <p>{{rating}}</p>
-                                     </ul>
-                                 {{/with}}
+                                  </li>
+      
+                                 <li class="list-group-item"><b>Guide:</b>
+                                    {{#with guide}}
+                                       <div>{{name}}</div>
+                                       <div>{{language}}</div>
+                                       <div>{{rating}}</div>
+                                    {{/with}}
+                                 </li>
+                        </ul>
+                              {{/with}}
                      {{/with}}
-         {{/with}}
-                      </div>
-       
+            </div>         
+         </div>
       {{/with}}
+      </div>
    {{/with}}
-
-         
 </div>
-
