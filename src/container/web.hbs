@@ -1,11 +1,14 @@
-<div>
-<h2>Languages:</h2>
+<div class="card m-3">
+   <div class="card-header mb-3">
+      <h2 class="ms-3">Languages</h2>
+   </div>
+   <div class="ms-3 me-3">
 {{#with web}}
    {{#with languages.[0]}}
             <b><em>{{name}}</em></b>
             <p>{{version}}</p>
             <p>{{description}}</p>
-          <h3>Elements:</h3>
+          <h5>Elements:</h5>
       {{#with elements.[0]}}
             <p>{{name}}</p>
             <p>{{description}}</p>
@@ -38,7 +41,7 @@
                      <b><em>{{name}}</em></b>
                      <p>{{version}}</p>
                      <p>{{description}}</p>
-                   <h3>Properties:</h3>
+                   <h5>Properties:</h5>
                   {{#with properties.[0]}}
                         <p>{{name}}</p>
                         <p>{{description}}</p>
@@ -58,7 +61,7 @@
                        <b><em>{{name}}</em></b>
                         <p>{{version}}</p>
                         <p>{{description}}</p>
-                       <h3>Functions:</h3>
+                       <h5>Functions:</h5>
                   {{#with functions.[0]}}
                            <p>{{name}}</p>
                            <p>{{description}}</p>
@@ -89,5 +92,6 @@
                      {{/with}}
                {{/with }}
 {{/with}}
+</div>
 </div>
 
